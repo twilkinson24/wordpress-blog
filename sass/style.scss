@@ -104,7 +104,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /***** Custom CSS Below Here *****/
 
+
 /*** Base Styles ***/
+
+
+/** Responsive Breakpoints
+	e.g.
+	@media(max-width: $xl) {
+        font-size: 20px;
+    }
+**/
+$xl:1440px;
+$lg: 992px;
+$md: 768px;  
+$sm: 576px;
+
 
 /** Primary Color Variables **/
 $green: #44936c;
