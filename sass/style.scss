@@ -244,7 +244,7 @@ p {
 }
 
 // Header
-.header {
+header.header {
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
@@ -256,17 +256,42 @@ p {
 	left: 0px;
 	width: 100%;
 	z-index: 100;
-	background-color: transparent;
-	box-shadow: rgba(0, 0, 0, 0) 0px 2px 3px 1px;
-	transition: all 250ms ease 0s;
+	background:transparent;
+	//box-shadow: rgba(0, 0, 0, 0) 0px 2px 3px 1px;
+	//transition: all 250ms ease 0s;
 } 
 
+#wrapper-navbar {
+	margin-bottom: -65px;
+	}
+
+.logo-holder {
+	.logo {
+		width: 200px;
+		
+	}
+}
+
+.home-banner {
+	height: 1000px;
+	background: rgba(167, 165, 165, 0.82);
+	background-image: url(./img/home-banner.svg);
+	background-size: contain;
+	background-repeat: no-repeat;	
+}
+
+
+
 // Nav menu styles
-nav a {
+.navbar {
+	background-color: transparent;		
+}
+
+.navbar a {
 	box-sizing: border-box;
 	background-color: transparent;
 	touch-action: manipulation;
-	color: rgb(255, 153, 2);
+	color: #fff;
 	text-decoration: none !important;
 	transition: all 0.4s ease-in-out 0s;
 	font-size: 15px;
@@ -280,22 +305,10 @@ nav a {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-
-nav a:hover {
+.navbar a:hover {
 	color: rgb(255, 153, 2);
 }
 
-//Hero Overlay
-.hero-overlay {
-	box-sizing: border-box;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	background-color: #000000;
-	opacity: 0.25;
-}
 
 // Footer
 .footer {
