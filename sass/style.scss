@@ -104,6 +104,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /***** Custom CSS Below Here *****/
 
+@import "bootstrap-custom/bootstrap.scss";
+
 /** Responsive Breakpoint Variables
 	e.g.
 	@media(max-width: $xl) {
@@ -140,54 +142,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
 	box-sizing: border-box;
-	font-size: 54px;
-	margin: 0.67em 0px;
-	margin-top: 0px;
-	margin-bottom: 0.5rem;
-	line-height: 1.3;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	font-weight: 500;
-	font-family: Montserrat, sans-serif;
-	color: white;
-	word-break: break-word;
-}
-
-h2 {
-	box-sizing: border-box;
-	margin-top: 0px;
-	margin-bottom: 0.5rem;
-	line-height: 1.2;
-	font-weight: 500;
-	font-family: Montserrat, sans-serif;
-	color: rgb(0, 0, 0);
-	word-break: break-word;
-	font-size: 36px;
-}
-
-h3 {
-	box-sizing: border-box;
-	margin-top: 0px;
-	margin-bottom: 0.5rem;
-	line-height: 1.5;
-	font-weight: 500;
-	font-family: Montserrat, sans-serif;
-	color: rgb(0, 0, 0);
-	word-break: break-word;
-	font-size: 22.5px;
-	text-transform: uppercase;
-}
-
-h4 {
-	box-sizing: border-box;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	line-height: 1.5;
-	font-weight: 600;
-	font-family: Montserrat, sans-serif;
-	color: rgb(0, 0, 0);
-	word-break: break-word;
-	font-size: 20px;
+	margin-bottom: .5rem;
 }
 
 p {
@@ -244,40 +203,51 @@ p {
 }
 
 // Header
-header.header {
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding: 10px 20px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
+.site-header {
+	height: 68px;
+	top: 0;
+	left: 0;
 	width: 100%;
-	z-index: 100;
-	background:transparent;
-	//box-shadow: rgba(0, 0, 0, 0) 0px 2px 3px 1px;
-	//transition: all 250ms ease 0s;
-} 
+	z-index: 10;
+}
 
-#wrapper-navbar {
-	margin-bottom: -65px;
+// Navbar 
+#main-nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	#primary-menu {
+		list-style-type: none;
 	}
+}
+
+// hero (below top nav)
+.hero {
+	background: url('./img/home-banner.svg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+
+	.hero-overlay {
+		background: #000;
+		opacity: .25;
+		height: 100%;
+		min-height: 500px;
+		padding-top: 210px;
+		padding-bottom: 130px;
+	}
+	.page-title {
+		color: #fff;
+	}
+}
+
 
 .logo-holder {
 	.logo {
 		width: 200px;
 		
 	}
-}
-
-.home-banner {
-	height: 1000px;
-	background: rgba(167, 165, 165, 0.82);
-	background-image: url(./img/home-banner.svg);
-	background-size: contain;
-	background-repeat: no-repeat;	
 }
 
 

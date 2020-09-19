@@ -124,8 +124,8 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
 function _s_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', '_s' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Main Blog Sidebar', '_s' ),
+			'id'            => 'blog-sidebar',
 			'description'   => esc_html__( 'Add widgets here.', '_s' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -144,6 +144,10 @@ function _s_scripts() {
 	wp_style_add_data( '_s-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	// Custom Additions
+	wp_enqueue_script( 'custom-repx-js', get_template_directory_uri() . '/js/repx-custom.js', array('jquery'), '0', true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
