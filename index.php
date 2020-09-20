@@ -16,31 +16,31 @@ get_header();
 ?>
 		<header class="hero position-relative">
 			<div class="hero-overlay h-100 w-100">
-				<h1 class="page-title"><?php the_title(); ?></h1>
+				<div class="container">
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				</div>
 			</div>
 		</header>
 		<main id="primary" class="site-main">
-
+			<div class="container">
 			<?php
 			if ( have_posts() ) :
 
 					?>
-					
 
-				<?php
+			<div class="row">
+
+			<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+				<div class="col-lg-8">
+			<?php else : ?>
+				<div class="col-12">
+			<?php endif; 
+					
 
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
-				?>
-
-					<div class="row">
-
-					<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-						<div class="col-lg-8">
-					<?php else : ?>
-						<div class="col-12">
-					<?php endif; 
+		
 
 					/*
 					* Include the Post-Type-specific template for the content.
@@ -73,7 +73,7 @@ get_header();
 
 		endif;
 			?>
-
+			</div><!-- end .container -->
 		</main><!-- #main -->
 	</div> <!-- End .col-lg-8 -->
 

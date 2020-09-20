@@ -954,6 +954,10 @@ textarea {
 	width: 100%;
 }
 
+.mx-auto {
+	margin: 0 auto;
+}
+
 .d-flex {
 	display: -ms-flexbox !important;
 	display: flex !important;
@@ -4447,6 +4451,12 @@ p {
 	color: #444444;
 }
 
+.container {
+	margin: 0 auto;
+	max-width: 1240px;
+	padding: 0 20px;
+}
+
 .cta_button {
 	-webkit-font-smoothing: antialiased;
 	cursor: pointer;
@@ -4557,6 +4567,17 @@ p {
 
 .navbar a:hover {
 	color: #ff9902;
+}
+
+.blog-roll-post {
+	border-bottom: 1px solid #eee;
+}
+
+.blog-roll-post .post-thumbnail img {
+	object-fit: cover;
+	object-position: center;
+	width: 750px;
+	height: 400px;
 }
 
 .footer {

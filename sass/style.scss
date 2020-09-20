@@ -158,6 +158,12 @@ p {
 	color: rgb(68, 68, 68);
 }
 
+.container {
+	margin: 0 auto;
+	max-width: 1240px;
+	padding: 0 20px;
+}
+
 // CTA Button (Orange)
 .cta_button {
 	-webkit-font-smoothing: antialiased;
@@ -277,6 +283,18 @@ p {
 }
 .navbar a:hover {
 	color: rgb(255, 153, 2);
+}
+
+// Blog 
+.blog-roll-post {
+	border-bottom: 1px solid #eee;
+	
+	.post-thumbnail img {
+		object-fit: cover;
+		object-position: center;
+		width: 750px;
+		height: 400px;
+	}
 }
 
 

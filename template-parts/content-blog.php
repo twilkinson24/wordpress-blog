@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog-roll-post'); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -29,10 +29,27 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php _s_post_thumbnail(); ?>
+    <?php if(has_post_thumbnail($post->ID)) : ?>
+        <div class="post-thumbnail">
+            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+                    $thumb_id = get_post_thumbnail_id(get_the_ID());
+                    $featured_img_alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+            ?>
+
+            <a href="<?php echo the_permalink(); ?>">
+                <img src="<?php echo $featured_img_url; ?>" alt="<?php echo $featured_img_alt; ?>" class="post-thumbnail-img" loading="lazy">
+            </a>
+        </div>
+
+    <?php else : ?>
+        <div class="post-thumbnail">
+            <a href="<?php echo the_permalink(); ?>">
+                <img src="<?php echo get_template_directory_uri() . '/img/home-banner.svg'; ?>" alt="<?php echo get_the_title(); ?>" class="post-thumbnail-img" loading="lazy">
+            </a>
+        </div>
+    <?php endif; ?>
 
 	<div class="entry-content">
-        <h5>Test</h5>
 		<?php
 		the_content(
 			sprintf(
@@ -62,3 +79,4 @@
 		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+
