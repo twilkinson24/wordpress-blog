@@ -345,7 +345,85 @@ a.social-links__icon:hover {
 }
 
 
+// Blog Roll
+.blog-roll-post {
+	h2 {
+		box-sizing: border-box;
+		margin-top: 80px;
+		margin-bottom: 0.5rem;
+		line-height: 1.2;
+		font-weight: 500;
+		font-family: Montserrat, sans-serif;
+		color: rgb(0, 0, 0);
+		word-break: break-word;
+		font-size: 36px;
+	}
+	a {
+		color: #444;
+		font-weight: 700;
+		text-decoration: none;
+		transition: all .4s ease-in-out;
+		&:hover {
+			text-decoration: underline; 
+		}
+	}
+	.entry-meta {
+		box-sizing: border-box;
+		margin-top: 0px;
+		font-family: Merriweather, serif;
+		font-size: 13px;
+		font-weight: 300;
+		color: rgb(102, 102, 102);
+	}
+	
+	img.post-thumbnail-img {
+		border-style: none;
+		box-sizing: inherit;
+		height: 400px;
+		max-width: 100%;
+		vertical-align: middle;
+		object-fit: cover;
+		object-position: center center;
+		width: 750px;
+		margin-top: 20px;
+	}
+	.entry-footer {
+		.cat-links  a {
+			box-sizing: inherit;
+			padding: 6px 8px;
+			border-radius: 12px 12px 12px 12px;
+			margin: 4px;
+			background-color: #00a4bd;
+			color: #fff;
+			font-size: 10px;
+			font-family: 'Montserrat',sans-serif;
+			text-transform: uppercase;
+			white-space: nowrap;
+			display: inline-block;
+			vertical-align: middle;
+			text-decoration: none;
+			transition: all .4s ease-in-out;
+			letter-spacing: 1px;
+			line-height: 1.2em;
+				&:hover {
+				background-color: rgb(51, 71, 91);
+				color: rgb(255, 255, 255);
+				text-decoration: none;
+				}
+		}
+		.comments-link {
+			display: none;
+		}
+		.edit-link {
+			display: none;
+		}
+	}
+}
 
+// Blog Sidebar
+.blog-sidebar {
+	margin-top: 50px;
+}
 
 
 
