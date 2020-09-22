@@ -17,7 +17,8 @@ get_header();
 		<header class="hero position-relative">
 			<div class="hero-overlay h-100 w-100">
 				<div class="container">
-					<h1 class="page-title"><?php the_title(); ?></h1>
+					<!-- <h1 class="page-title"><?php //the_title(); ?></h1> -->
+					<h1 class="blog-title">The Reputation Management Blog</h1>
 				</div>
 			</div>
 		</header>

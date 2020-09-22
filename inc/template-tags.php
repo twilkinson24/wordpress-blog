@@ -63,7 +63,11 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ' ', '_s' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'TOPICS: %1$s', '_s' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf(
+					 '<span class="cat-links"><span class="tag-title">%s</span>%s</span>', 
+					 __( 'TOPICS: ', '_s'),
+					 
+					 $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
