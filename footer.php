@@ -12,19 +12,31 @@
 ?>
 
 		<footer id="colophon" class="site-footer">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
-					?>
-				</a>
-				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">Automattic</a>' );
-					?>
-			</div><!-- .site-info -->
+			
+			<div class="container">
+				<?php if ( is_active_sidebar( 'footer_top_widget_area' ) ) : ?>
+					<div id="footer-top-sidebar" class="widget-area" role="complementary">
+						<?php dynamic_sidebar( 'footer_top_widget_area' ); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( is_active_sidebar( 'footer_widget_area_bottom_left' ) || is_active_sidebar( 'footer_widget_area_bottom_right' ) ) : ?>
+				<div class="bottom-footer row justify-content-between">
+
+					<div id="footer-bottom-left" class="widget-area col-lg-6" role="complementary">
+						<?php dynamic_sidebar( 'footer_widget_area_bottom_left' ); ?>
+					</div>
+
+					<div id="footer-bottom-left" class="widget-area col-lg-6" role="complementary">
+						<?php dynamic_sidebar( 'footer_widget_area_bottom_right' ); ?>
+					</div>
+
+				</div>
+				<?php else : ?>
+				<p>widgets need to be added in wp dashboard</p>
+				<?php endif; ?>
+			</div>
+
 		</footer><!-- #colophon -->
 	
 </div><!-- #page -->
