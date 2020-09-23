@@ -33,7 +33,9 @@
 
 				</div>
 				<?php else : ?>
-				<p class="widget-area">bottom widgets need to be added in wp dashboard</p>
+					<div class="widget-area">
+						<p>widgets need to be added in wp dashboard</p>
+					</div>	
 				<?php endif; ?>
 			</div>
 
