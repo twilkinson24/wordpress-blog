@@ -21,13 +21,13 @@
 				<?php endif; ?>
 
 				<?php if ( is_active_sidebar( 'footer_widget_area_bottom_left' ) || is_active_sidebar( 'footer_widget_area_bottom_right' ) ) : ?>
-				<div class="bottom-footer row justify-content-between">
+				<div class="bottom-footer row justify-content-between mx-auto">
 
-					<div id="footer-bottom-left" class="widget-area col-lg-6" role="complementary">
+					<div id="footer-bottom-left" class="widget-area mx-auto col-lg-6" role="complementary">
 						<?php dynamic_sidebar( 'footer_widget_area_bottom_left' ); ?>
 					</div>
 
-					<div id="footer-bottom-left" class="widget-area col-lg-6" role="complementary">
+					<div id="footer-bottom-left" class="widget-area mx-auto col-lg-6" role="complementary">
 						<?php dynamic_sidebar( 'footer_widget_area_bottom_right' ); ?>
 					</div>
 

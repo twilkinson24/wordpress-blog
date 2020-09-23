@@ -112,7 +112,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         font-size: 20px;
     }
 **/
-$xl:1440px;
+$xl:1200px;
 $lg: 992px;
 $md: 768px;  
 $sm: 576px;
@@ -325,16 +325,70 @@ footer.site-footer {
 	}
 
 	.footer-social-icons {
-		margin: 0;
-
+		margin: 72px 0 25px 0;
+		padding-bottom: 20px;
+		border-bottom: 1px solid gray;
 		svg,
 		img {
 			height: 18px;
 			width: 16px;
-			fill: #fff;
+			fill: #fff;		
+		}
+		.social-icon a{
+			padding: 20px;
+		}
+		@media(max-width: $xl) {
+			padding-left: 0;	
+		}  	
+	}
+	.footer-bottom-left {
+		text-align: center;
+	 	p {
+			font-size: 13px;
+			margin-top: .5rem;
+			color: #eee;	
 		}
 	}
+	.footer-menu {
+		display: flex;
+		justify-content: flex-end;
+		margin: 20px 0 0 0;
+		a {
+			box-sizing: border-box;
+			color: #fff;
+			padding-left: 1em;
+			background-color: transparent;
+			touch-action: manipulation;
+			text-decoration: none;
+			transition: all 0.4s ease-in-out 0s;
+			font-size: 18px;
+			font-weight: 300;
+			font-family: Merriweather, sans-serif;
+			text-transform: none;
+			&:hover {
+				color: rgb(255, 153, 2);
+				text-decoration: underline;
+			}	
+		}
+		@media(max-width: $xl) {
+			margin: 0 auto;
+			padding: 0;
+			padding-bottom: 25px;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			a:first-child {
+				padding: 0.5em;
+			}
+		}  
+		
+		
+		
+	}
+	
 }
+
+
 
 
 // Blog Page (index page)
