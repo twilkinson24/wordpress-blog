@@ -4424,6 +4424,11 @@ select[multiple].input-lg {
 **/
 /** Primary Color Variables **/
 /*** Base Styles ***/
+html,
+body {
+	height: 100%;
+}
+
 body {
 	font-family: Merriweather,serif;
 	font-size: 18px;
@@ -4587,42 +4592,28 @@ p {
 	background-color: #33475b;
 }
 
-.footer a {
-	box-sizing: border-box;
-	background-color: transparent;
-	touch-action: manipulation;
-	color: #ff9902;
-	text-decoration: underline;
-	transition: all 0.4s ease-in-out 0s;
-	font-size: 18px;
-	font-weight: 300;
-	font-family: Merriweather, sans-serif;
-	text-transform: none;
+footer.site-footer {
+	background: #34445c;
 }
 
-.footer a:hover {
-	color: #ff9902;
-	text-decoration: underline;
+footer.site-footer .widget-area h3,
+footer.site-footer .widget-area p {
+	color: #fff;
 }
 
-a.social-links__icon {
-	box-sizing: border-box;
-	background-color: transparent;
-	touch-action: manipulation;
-	color: #ff9902;
-	text-decoration: underline;
-	transition: all 0.4s ease-in-out 0s;
-	display: inline-block;
-	position: relative;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	margin: 0px 5px;
+footer.site-footer ul {
+	list-style-type: none;
 }
 
-a.social-links__icon:hover {
-	color: #ff9902;
-	text-decoration: underline;
+footer.site-footer .footer-social-icons {
+	margin: 0;
+}
+
+footer.site-footer .footer-social-icons svg,
+footer.site-footer .footer-social-icons img {
+	height: 18px;
+	width: 16px;
+	fill: #fff;
 }
 
 .blog-title {
