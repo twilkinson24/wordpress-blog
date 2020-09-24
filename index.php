@@ -14,14 +14,41 @@
 
 get_header();
 ?>
-		<header class="hero position-relative">
-			<div class="hero-overlay h-100 w-100">
-				<div class="container">
-					<!-- <h1 class="page-title"><?php //the_title(); ?></h1> -->
-					<h1 class="blog-title">The Reputation Management Blog</h1>
+
+		<?php 
+			/** 
+			 * Use featured image for hero if we have one
+			 *  - if not, show the title with default hero
+			 */
+
+			$page_id = get_query_var('page_id'); 
+		
+			if (has_post_thumbnail( $page_id ) ) : 
+				
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large');
+				$ft_image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'large' ); 
+			?>
+				<div class="hero position-relative">
+					<div class="hero-overlay h-100 w-100" style="background-image: url('<?php echo $ft_image; ?>">
+						<div class="container">
+							<h1 class="page-title"><?php single_post_title(); ?></h1> 
+						</div>
+					</div>
 				</div>
-			</div>
-		</header>
+
+		<?php else : ?>
+
+				<div class="hero position-relative">
+					<div class="hero-overlay h-100 w-100">
+						<div class="container">
+							<h1 class="page-title"><?php single_post_title(); ?></h1>
+						</div>
+					</div>
+				</div>
+
+		<?php endif; ?>
+
+
 		<main id="primary" class="site-main">
 			<div class="container">
 			<?php
