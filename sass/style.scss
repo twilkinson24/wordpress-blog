@@ -314,6 +314,8 @@ p {
 // Footer Nav
 footer.site-footer {
 	background: $darkblue;
+	padding-top: 82px;
+	padding-bottom: 85px;
 
 	.widget-area h3,
 	.widget-area p {
@@ -325,7 +327,7 @@ footer.site-footer {
 	}
 
 	.footer-social-icons {
-		margin: 72px 0 25px 0;
+		margin: 0 0 25px 0;
 		padding-bottom: 20px;
 		border-bottom: 1px solid gray;
 		svg,
@@ -342,12 +344,14 @@ footer.site-footer {
 		}  	
 	}
 	.footer-bottom-left {
-		text-align: center;
+		margin-top: -8px;
 	 	p {
 			font-size: 13px;
-			margin-top: .5rem;
 			color: #eee;	
 		}
+		@media(max-width: $xl) {
+			text-align: center;	
+		}  	
 	}
 	.footer-menu {
 		display: flex;
@@ -380,15 +384,9 @@ footer.site-footer {
 			a:first-child {
 				padding: 0.5em;
 			}
-		}  
-		
-		
-		
-	}
-	
+		}  	
+	}	
 }
-
-
 
 
 // Blog Page (index page)

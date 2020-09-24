@@ -4594,6 +4594,8 @@ p {
 
 footer.site-footer {
 	background: #34445c;
+	padding-top: 82px;
+	padding-bottom: 85px;
 }
 
 footer.site-footer .widget-area h3,
@@ -4606,7 +4608,7 @@ footer.site-footer ul {
 }
 
 footer.site-footer .footer-social-icons {
-	margin: 72px 0 25px 0;
+	margin: 0 0 25px 0;
 	padding-bottom: 20px;
 	border-bottom: 1px solid gray;
 }
@@ -4629,13 +4631,18 @@ footer.site-footer .footer-social-icons .social-icon a {
 }
 
 footer.site-footer .footer-bottom-left {
-	text-align: center;
+	margin-top: -8px;
 }
 
 footer.site-footer .footer-bottom-left p {
 	font-size: 13px;
-	margin-top: .5rem;
 	color: #eee;
+}
+
+@media (max-width: 1200px) {
+	footer.site-footer .footer-bottom-left {
+		text-align: center;
+	}
 }
 
 footer.site-footer .footer-menu {
