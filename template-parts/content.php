@@ -95,32 +95,3 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <?php 
-	/** 
-			 * Use featured image for hero if we have one
-			 *  - if not, show the title with default hero
-			 */
-
-
-if(has_post_thumbnail($post->ID)) :
-
-$featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
-?>
-<div class="hero position-relative">
-	<div class="hero-overlay h-100 w-100" style="background-image: url('<?php echo $featured_img_url; ?>">
-		<div class="container">
-			<h1 class="page-title"><?php the_title(); ?></h1> -->
-		</div>
-	</div>
-</div>
-
-<?php else : ?>
-
-<div class="hero position-relative">
-	<div class="hero-overlay h-100 w-100">
-		<div class="container">
-			<h1 class="page-title"><?php the_title(); ?></h1>
-		</div>
-	</div>
-</div>
-
-<?php endif; ?>
