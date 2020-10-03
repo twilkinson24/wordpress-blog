@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: _s
 Theme URI: https://underscores.me/
@@ -4523,6 +4524,7 @@ p {
 
 .site-header {
 	height: 68px;
+	padding: 10px 20px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -4570,11 +4572,12 @@ p {
 	color: red;
 }
 
-.navbar {
+#primary-menu {
 	background-color: transparent;
+	margin: 0;
 }
 
-.navbar a {
+#primary-menu a {
 	box-sizing: border-box;
 	background-color: transparent;
 	touch-action: manipulation;
@@ -4582,7 +4585,7 @@ p {
 	text-decoration: none !important;
 	transition: all 0.4s ease-in-out 0s;
 	font-size: 15px;
-	padding: 10px 5px;
+	padding: 10px 15px 10px 5px;
 	overflow: visible !important;
 	max-width: none !important;
 	width: auto !important;
@@ -4593,8 +4596,82 @@ p {
 	text-transform: uppercase;
 }
 
-.navbar a:hover {
+#primary-menu a:hover {
 	color: #ff9902;
+}
+
+#primary-menu .sub-menu {
+	background: #fff;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#primary-menu .sub-menu:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #fff transparent;
+	position: absolute;
+	bottom: 100%;
+	left: .5rem;
+}
+
+#primary-menu .sub-menu .menu-item {
+	margin-left: 0;
+	transition: all 400ms linear;
+}
+
+#primary-menu .sub-menu .menu-item a {
+	color: #444;
+	display: block;
+	width: 100%;
+	padding: 5px 30px 5px 15px;
+}
+
+#primary-menu .sub-menu .menu-item:hover a {
+	background: #00a4bd;
+	color: #fff;
+}
+
+#primary-menu .menu-item-has-children {
+	position: relative;
+}
+
+#primary-menu .menu-item-has-children:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+#primary-menu .menu-item-has-children:after {
+	content: "⌄";
+	color: #fff;
+	display: inline-block;
+	font-style: normal;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1;
+	margin-left: 3px;
+	vertical-align: top;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	transition: all 400ms linear;
+}
+
+#primary-menu .menu-item-has-children:hover:after {
+	color: #ff9902;
+}
+
+#primary-menu .menu-item-has-children a {
+	padding: 10px 20px 10px 5px;
 }
 
 .blog-roll-post {

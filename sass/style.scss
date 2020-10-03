@@ -127,6 +127,9 @@ $blue: #3c6a81;
 $lightblue: #CFE2F3;
 $peach: #fb7b5b;
 $black: #000000;
+$gold: rgb(255,153,2);
+$dark-grey: #444;
+$repx-blue: #00a4bd;
 $white: #FFFFFF; 
 
 
@@ -243,6 +246,7 @@ p {
 // Header
 .site-header {
 	height: 68px;
+	padding: 10px 20px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -299,31 +303,119 @@ p {
 
 
 // Nav menu styles
-.navbar {
-	background-color: transparent;		
+// Nav dropdown
+#primary-menu  {
+	background-color: transparent;	
+	margin: 0;	
+
+	a {
+		box-sizing: border-box;
+		background-color: transparent;
+		touch-action: manipulation;
+		color: #fff;
+		text-decoration: none !important;
+		transition: all 0.4s ease-in-out 0s;
+		font-size: 15px;
+		padding: 10px 15px 10px 5px ;
+		overflow: visible !important;
+		max-width: none !important;
+		width: auto !important;
+		font-family: helvetica, sans-serif;
+		display: inline-block;
+		white-space: nowrap;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $gold;
+		}
+	}
+	.sub-menu {
+		background: #fff;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+		list-style-type: none;
+		margin: 0;
+		padding: 10px 0;
+
+		&:before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 5px 5px 5px;
+			border-color: transparent transparent #fff transparent;
+			position: absolute;
+			bottom: 100%;
+			left: .5rem;
+		}
+
+		.menu-item  {
+			margin-left: 0;
+			transition: all 400ms linear;
+
+				a {
+				color: $dark-grey;
+				display: block;
+				width: 100%;
+				padding: 5px 30px 5px 15px;
+			}
+
+			&:hover a {
+				background: $repx-blue;
+				color: #fff;
+			}
+
+			
+		}
+	}
+
+	.menu-item-has-children {
+		position: relative;
+
+		&:hover .sub-menu {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&:after {
+			content: "⌄";
+			color: #fff;
+			display: inline-block;
+			font-style: normal;
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 1;
+			margin-left: 3px;
+			vertical-align: top;
+			position: absolute; 
+			right: 5px;
+			top: 10px;
+			transition: all 400ms linear;
+		}
+
+		&:hover:after {
+			color: $gold;
+		}
+
+		a {
+			padding: 10px 20px 10px 5px;
+		}
+	}
+
 }
 
-.navbar a {
-	box-sizing: border-box;
-	background-color: transparent;
-	touch-action: manipulation;
-	color: #fff;
-	text-decoration: none !important;
-	transition: all 0.4s ease-in-out 0s;
-	font-size: 15px;
-	padding: 10px 5px;
-	overflow: visible !important;
-	max-width: none !important;
-	width: auto !important;
-	font-family: helvetica, sans-serif;
-	display: inline-block;
-	white-space: nowrap;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.navbar a:hover {
-	color: rgb(255, 153, 2);
-}
+
+
+
+// Mobile Nav
+
+
+
+// END nav
 
 // Blog 
 .blog-roll-post {
