@@ -381,6 +381,23 @@ p {
 			visibility: visible;
 		}
 
+		.menu-item.arrow {
+			position: relative;
+			transition: all 400ms linear;
+
+			&:after {
+				content: "▶";
+				position: absolute;
+				right: 10px;
+				top: 5px;
+				transform: scale(0.7);
+				transition: all 400ms linear;
+			}
+			&:hover:after {
+				color: #fff;
+			}
+		}
+
 		a {
 			padding: 10px 20px 10px 5px;
 		}
