@@ -4650,7 +4650,11 @@ p {
 	visibility: visible;
 }
 
-#primary-menu .menu-item-has-children:after {
+#primary-menu .menu-item-has-children a {
+	padding: 10px 20px 10px 5px;
+}
+
+#primary-menu .menu-item-has-children > a:after {
 	content: "⌄";
 	color: #fff;
 	display: inline-block;
@@ -4666,12 +4670,8 @@ p {
 	transition: all 400ms linear;
 }
 
-#primary-menu .menu-item-has-children:hover:after {
+#primary-menu .menu-item-has-children > a:hover:after {
 	color: #ff9902;
-}
-
-#primary-menu .menu-item-has-children a {
-	padding: 10px 20px 10px 5px;
 }
 
 .blog-roll-post {

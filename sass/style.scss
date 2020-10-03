@@ -381,29 +381,32 @@ p {
 			visibility: visible;
 		}
 
-		&:after {
-			content: "⌄";
-			color: #fff;
-			display: inline-block;
-			font-style: normal;
-			font-size: 15px;
-			font-weight: bold;
-			line-height: 1;
-			margin-left: 3px;
-			vertical-align: top;
-			position: absolute; 
-			right: 5px;
-			top: 10px;
-			transition: all 400ms linear;
-		}
-
-		&:hover:after {
-			color: $gold;
-		}
-
 		a {
 			padding: 10px 20px 10px 5px;
 		}
+
+		&>a {
+			&:after {
+				content: "⌄";
+				color: #fff;
+				display: inline-block;
+				font-style: normal;
+				font-size: 15px;
+				font-weight: bold;
+				line-height: 1;
+				margin-left: 3px;
+				vertical-align: top;
+				position: absolute; 
+				right: 5px;
+				top: 10px;
+				transition: all 400ms linear;
+			}
+	
+			&:hover:after {
+				color: $gold;
+			}
+		}
+		
 	}
 
 }
