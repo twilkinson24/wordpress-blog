@@ -31,31 +31,29 @@
 			<header id="masthead" class="site-header position-absolute">
 			
 				<nav id="main-nav" class="navbar p-0" >
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-
+				
 						<div class="logo-holder">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="logo img-fluid pl-3" alt="the reputation x logo">
+							<a href="/">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="logo img-fluid pl-3" alt="the reputation x logo">
+							</a>
 						</div>
 						<!-- The WordPress Menu goes here -->
 						<?php wp_nav_menu(
-							// array(
-							// 	'theme_location'  => 'menu-1',
-							// 	'container_class' => 'collapse navbar-collapse',
-							// 	'container_id'    => 'navbarNavDropdown',
-							// 	'menu_class'      => 'navbar-nav ml-auto pr-5',
-							// 	'fallback_cb'     => '',
-							// 	'menu_id'         => 'primary-menu',
-							// 	'depth'           => 2
-							// )
 
 								array(
 									'theme_location' => 'menu-1',
 									'menu_id'        => 'primary-menu',
-									'menu_class'      => 'navbar d-flex',
+									'menu_class'      => 'navbar',
 									'depth'           => 2
 								)
 							
 						); ?>
+
+						<!-- Mobile Nav Toggle Btn -->
+						<button class="menu-toggle justify-content-center align-items-start" aria-controls="primary-menu" aria-expanded="false">
+							<span class="sr-only">Toggle Primary Menu</span>
+							<span class="mobile-toggle d-flex justify-content-center align-items-center"><span class="bars"></span></span>
+						</button>
 
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->

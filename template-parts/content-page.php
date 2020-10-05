@@ -48,11 +48,6 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 		<div class="col-12">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</header><!-- .entry-header -->
-
-				<?php echo 'original ft image was here'; // _s_post_thumbnail(); ?>
 
 				<div class="entry-content">
 					<?php
