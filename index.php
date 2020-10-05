@@ -49,7 +49,6 @@ get_header();
 		<?php endif; ?>
 
 
-		<main id="primary" class="site-main">
 			<div class="container">
 			<?php
 			if ( have_posts() ) :
@@ -93,7 +92,7 @@ get_header();
 						
 			<?php endif; ?>
 
-		<!-- end .row -->
+		</div><!-- end .row -->
 
 		<?php else : // if no posts
 
@@ -102,8 +101,6 @@ get_header();
 		endif;
 			?>
 			</div><!-- end .container -->
-		</main><!-- #main -->
-	</div> <!-- End .col-lg-8 -->
 
 <?php
 get_footer();

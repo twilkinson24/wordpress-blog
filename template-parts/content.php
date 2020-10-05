@@ -22,7 +22,7 @@ if(has_post_thumbnail($post->ID)) :
 $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 ?>
 <div class="hero position-relative">
-	<div class="hero-overlay h-100 w-100" style="background-image: url('<?php echo $featured_img_url; ?>');">
+	<div class="hero-overlay h-100 w-100" style="background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('<?php echo $featured_img_url; ?>');">
 		<div class="container">
 			<h1 class="page-title"><?php the_title(); ?></h1> 
 		</div>
@@ -56,7 +56,7 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 							<header class="entry-header">
 								<?php
 								if ( is_singular() ) :
-									the_title( '<h1 class="entry-title">', '</h1>' );
+									the_title( '<h2 class="entry-title">', '</h2>' );
 								else :
 									the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 								endif;
