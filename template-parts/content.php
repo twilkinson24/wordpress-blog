@@ -15,8 +15,11 @@
 			 * Use featured image for hero if we have one
 			 *  - if not, show the title with default hero
 			 */
-$reading_time = get_field('post_reading_time');
 
+
+if(class_exists('ACF')) {
+	$reading_time = get_field('post_reading_time');
+}
 
 if(has_post_thumbnail($post->ID)) :
 

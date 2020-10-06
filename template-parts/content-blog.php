@@ -7,8 +7,9 @@
  * @package _s
  */
 
-
- $reading_time = get_field('post_reading_time');
+if(class_exists('ACF')) {
+ 	$reading_time = get_field('post_reading_time');
+}
 
 ?>
 
