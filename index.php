@@ -58,7 +58,7 @@ get_header();
 			<div class="row">
 
 			<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-				<div class="col-lg-8">
+				<div class="col-lg-8 content-wrap">
 			<?php else : ?>
 				<div class="col-12">
 			<?php endif; 

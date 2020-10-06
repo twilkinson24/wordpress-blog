@@ -219,6 +219,10 @@ p {
 	margin: 0 auto;
 	max-width: 1240px;
 	padding: 0 20px;
+	
+	@media screen and (min-width: 1500px) {
+		width: 1240px;
+	}
 }
 
 // CTA Button (Download Deck in sidebar)
@@ -652,6 +656,15 @@ p {
 // END nav
 
 // Blog 
+.blog {
+	.content-wrap {
+		padding: 0 2% 0 0;
+
+		@media screen and (max-width: $md) {
+			padding: 0;
+		}
+	}
+}
 .blog-roll-post {
 	border-bottom: 1px solid #eee;
 	
@@ -807,10 +820,10 @@ footer.site-footer {
 		box-sizing: inherit;
 		height: 400px;
 		max-width: 100%;
+		width: 100%;
 		vertical-align: middle;
 		object-fit: cover;
 		object-position: center center;
-		width: 750px;
 	}
 	.entry-footer {
 		.cat-links  a {
@@ -859,8 +872,12 @@ footer.site-footer {
 // Blog Sidebar
 aside.blog-sidebar {
 	box-sizing: border-box;
-	padding-top: 10px;
-	padding-left: 3%;
+	padding: 0 0 0 2%;
+
+	@media screen and (max-width: $md) {
+		padding: 0;
+	}
+
 	h2 {
 		box-sizing: border-box;
 		margin-top: 0px;
@@ -979,6 +996,15 @@ aside.blog-sidebar {
 			background: rgba(0, 0, 0, 0.5);
 		}
 	}
+
+	.content-wrap {
+		padding: 0 2% 0 0;
+
+		@media screen and (max-width: $md) {
+			padding: 0;
+		}
+	}
+
 	article h1,
 	article h2,
 	article h3,

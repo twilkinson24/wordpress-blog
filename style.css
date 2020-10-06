@@ -4498,6 +4498,12 @@ p {
 	padding: 0 20px;
 }
 
+@media screen and (min-width: 1500px) {
+	.container {
+		width: 1240px;
+	}
+}
+
 .cta_button a {
 	-webkit-font-smoothing: antialiased;
 	user-select: none;
@@ -4937,6 +4943,16 @@ p {
 	padding: 15px 30px 15px 35px;
 }
 
+.blog .content-wrap {
+	padding: 0 2% 0 0;
+}
+
+@media screen and (max-width: 768px) {
+	.blog .content-wrap {
+		padding: 0;
+	}
+}
+
 .blog-roll-post {
 	border-bottom: 1px solid #eee;
 }
@@ -5107,10 +5123,10 @@ footer.site-footer .footer-menu a:hover {
 	box-sizing: inherit;
 	height: 400px;
 	max-width: 100%;
+	width: 100%;
 	vertical-align: middle;
 	object-fit: cover;
 	object-position: center center;
-	width: 750px;
 }
 
 .blog-roll-post .entry-footer .cat-links a {
@@ -5159,8 +5175,13 @@ footer.site-footer .footer-menu a:hover {
 
 aside.blog-sidebar {
 	box-sizing: border-box;
-	padding-top: 10px;
-	padding-left: 3%;
+	padding: 0 0 0 2%;
+}
+
+@media screen and (max-width: 768px) {
+	aside.blog-sidebar {
+		padding: 0;
+	}
 }
 
 aside.blog-sidebar h2 {
@@ -5274,6 +5295,16 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 .single-post .hero .hero-overlay {
 	background: transparent;
 	background: rgba(0, 0, 0, 0.5);
+}
+
+.single-post .content-wrap {
+	padding: 0 2% 0 0;
+}
+
+@media screen and (max-width: 768px) {
+	.single-post .content-wrap {
+		padding: 0;
+	}
 }
 
 .single-post article h1,

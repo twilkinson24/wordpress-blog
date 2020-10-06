@@ -48,7 +48,7 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 				<div class="row">
 
 				<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-					<div class="col-lg-8">
+					<div class="col-lg-8 content-wrap">
 				<?php else : ?>
 					<div class="col-12">
 				<?php endif; ?>
