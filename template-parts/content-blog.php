@@ -7,9 +7,17 @@
  * @package _s
  */
 
+
+ $reading_time = get_field('post_reading_time');
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog-roll-post'); ?>>
+<?php if($reading_time) : ?>
+		<p class="post-read-time">
+			<?php echo $reading_time; ?>
+		</p>
+	<?php endif; ?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -22,8 +30,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				_s_posted_on();
 				_s_posted_by();
+				_s_posted_on_blog_roll();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
