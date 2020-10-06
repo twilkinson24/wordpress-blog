@@ -36,6 +36,24 @@
     }
 
 
+
+
+    /* Sticky Navbar */
+    window.onscroll = function() {handleStickyNav()};
+
+    var navbar = document.getElementById("masthead");
+    // var sticky = navbar.offsetTop;
+
+    function handleStickyNav() {
+        console.log('hi')
+        if (window.pageYOffset >= 150) {
+            navbar.classList.add("sticky-nav")
+        } else {
+            navbar.classList.remove("sticky-nav");
+        }
+    }
+
+
     
 	
 })( jQuery );

@@ -33,7 +33,8 @@
 				
 						<div class="logo-holder">
 							<a href="/">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="logo img-fluid pl-3" alt="the reputation x logo">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" class="logo" alt="the reputation x logo">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo-color.svg" class="logo sticky-logo" alt="the reputation x logo">
 							</a>
 						</div>
 						<!-- The WordPress Menu goes here -->
