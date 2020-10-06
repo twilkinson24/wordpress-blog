@@ -4861,7 +4861,7 @@ footer.site-footer ul {
 footer.site-footer .footer-social-icons {
 	margin: 0 0 25px 0;
 	padding-bottom: 20px;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #8b9a9f;
 }
 
 footer.site-footer .footer-social-icons svg,
@@ -5156,6 +5156,13 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 	background: rgba(0, 0, 0, 0.5);
 }
 
+.single-post article h1,
+.single-post article h2,
+.single-post article h3,
+.single-post article h4 {
+	color: #000000;
+}
+
 .single-post .entry-title {
 	color: #000000;
 	font-size: 2.25rem;
@@ -5171,6 +5178,24 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 	.single-post .entry-title {
 		font-size: 1.3125rem;
 	}
+}
+
+.single-post .byline,
+.single-post .entry-meta .posted-on {
+	color: #666;
+	font-size: .8125rem;
+	margin-bottom: 8125rem;
+}
+
+.single-post .byline a,
+.single-post .entry-meta .posted-on a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.single-post .byline a:hover,
+.single-post .entry-meta .posted-on a:hover {
+	text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

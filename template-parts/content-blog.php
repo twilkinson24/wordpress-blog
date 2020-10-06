@@ -13,7 +13,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog-roll-post'); ?>>
-<?php if($reading_time) : ?>
+	<?php if($reading_time) : ?>
 		<p class="post-read-time">
 			<?php echo $reading_time; ?>
 		</p>

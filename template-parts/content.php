@@ -54,7 +54,14 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 				<?php endif; ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
 							<header class="entry-header">
+								<?php if($reading_time) : ?>
+									<p class="post-read-time">
+										<?php echo $reading_time; ?>
+									</p>
+								<?php endif; ?>
 								<?php
 								if ( is_singular() ) :
 									the_title( '<h2 class="entry-title">', '</h2>' );
@@ -73,7 +80,6 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 								<?php endif; ?>
 							</header><!-- .entry-header -->
 
-							<?php echo 'original featured image was here'; //_s_post_thumbnail(); ?>
 
 							<div class="entry-content">
 								<?php

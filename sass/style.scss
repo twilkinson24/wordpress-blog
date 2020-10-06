@@ -130,6 +130,7 @@ $black: #000000;
 $gold: rgb(255,153,2);
 $light-grey: rgba(0,0,0,.1);
 $dark-grey: #444;
+$grey: #666;
 $repx-blue: #00a4bd;
 $white: #FFFFFF; 
 
@@ -589,7 +590,7 @@ footer.site-footer {
 	.footer-social-icons {
 		margin: 0 0 25px 0;
 		padding-bottom: 20px;
-		border-bottom: 1px solid gray;
+		border-bottom: 1px solid $gray;
 		svg,
 		img {
 			height: 18px;
@@ -870,6 +871,12 @@ aside.blog-sidebar {
 			background: rgba(0, 0, 0, 0.5);
 		}
 	}
+	article h1,
+	article h2,
+	article h3,
+	article h4 {
+		color: $black;
+	}
 	.entry-title {
 		color: $black;
 		font-size: 2.25rem;
@@ -879,6 +886,21 @@ aside.blog-sidebar {
 		}
 		@media screen and (max-width: $sm) {
 			font-size: 1.3125rem
+		}
+	}
+	.byline,
+	.entry-meta .posted-on {
+		color: $grey; 
+		font-size: .8125rem; // 13px
+		margin-bottom: 8125rem;
+		
+		a {
+			color: $black;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
