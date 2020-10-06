@@ -235,7 +235,6 @@ function repx_recent_posts() {
 
 	if($repx_recent_post_shortcode_query->have_posts()) {
 
-
 		while($repx_recent_post_shortcode_query->have_posts()) : $repx_recent_post_shortcode_query->the_post();
 
 			if(has_post_thumbnail($post->ID)) {
@@ -246,8 +245,8 @@ function repx_recent_posts() {
 
 			$repx_post_author = sprintf(
 				/* translators: %s: post author. */
-				esc_html_x( 'By %s', 'post author', '_s' ),
-				'<span class="author">' . esc_html( get_the_author() ) . '</span>'
+				esc_html_x( 'by %s', 'post author', '_s' ),
+				esc_html( get_the_author() )
 			);
 			// function to get and trim excerpt
 			$repx_excerpt = get_the_excerpt();
@@ -262,16 +261,16 @@ function repx_recent_posts() {
 
 			$repx_shortcode_output .= '<div class="repx-recent-post">';
 
-				$repx_shortcode_output .= '<div class="d-flex title-and-ft-img">';
+				$repx_shortcode_output .= '<div class="d-flex justify-content-between title-and-ft-img">';
 					$repx_shortcode_output .= '<a href="' . get_the_permalink() . '">';
 						$repx_shortcode_output .= '<h4 class="title">' . get_the_title() . '</h4>';
 					$repx_shortcode_output .= '</a>';
 
 					$repx_shortcode_output .= '<img src="' . $repx_featured_img_url . '" alt="' . get_the_title() . '">';  
 				$repx_shortcode_output .= '</div>';
-				$repx_shortcode_output .=  $repx_post_author;
-				$repx_shortcode_output .= $repx_excerpt;
-				$repx_shortcode_output .= '<div class="d-block"><a href="' . get_the_permalink() . '">Read more </a></div>';
+				$repx_shortcode_output .=  '<p class="author">' . $repx_post_author . '</p>'; 
+				$repx_shortcode_output .= '<p class="excerpt">' . $repx_excerpt . '</p>';
+				$repx_shortcode_output .= '<p class="read-more"><a href="' . get_the_permalink() . '">Read more </a></p>';
 			$repx_shortcode_output .= '</div>';
 
 		endwhile;

@@ -132,6 +132,7 @@ $light-grey: rgba(0,0,0,.1);
 $dark-grey: #444;
 $grey: #666;
 $repx-blue: #00a4bd;
+$link-color: #327baa;
 $white: #FFFFFF; 
 
 
@@ -146,6 +147,11 @@ $white: #FFFFFF;
     font-family: 'Merriweather';  
     src: url(./fonts/Merriweather/Merriweather-Regular.ttf);  
     font-weight: 500;  
+}
+@font-face {
+    font-family: 'Merriweather';  
+    src: url(./fonts/Merriweather/Merriweather-Light.ttf);  
+    font-weight: 300;  
 }
 @font-face {
     font-family: 'Montserrat';  
@@ -174,6 +180,21 @@ body {
     line-height: 1.6em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-color;
+		text-decoration: underline;
+	}
+	&:active,
+	&:focus,
+	&:visited {
+		color: $link-color;
+	}
 }
 
 
@@ -399,13 +420,16 @@ p {
 			margin-left: 0;
 			transition: all 400ms linear;
 			border: none;
-			border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+			@media only screen and (max-width: $md) {
+				border-top: 1px solid rgba(0, 0, 0, 0.1);
+			}
 
 			a {
 				color: $dark-grey;
 				display: block;
 				width: 100%;
-				padding: 15px 30px 15px 15px;
+				padding: 5px 30px 5px 15px;
 
 				@media screen and (max-width: $md) {
 					padding: 15px 30px 15px 20px;
@@ -598,6 +622,10 @@ p {
 
 		a {
 			color: $dark-grey;
+
+			&:hover {
+				color: $gold;
+			}
 		}
 	}
 	.logo {
@@ -981,6 +1009,51 @@ aside.blog-sidebar {
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+	}
+}
+
+// recent posts widget 
+.repx-recent-post {
+	background: #f2f5f8; 
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.title-and-ft-img 	{
+		margin-bottom: 5px;
+		img {
+			height: 38px;
+			width: 75px;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.title {
+		font-family: 'Merriweather', serif;
+		font-size: 1.125rem;
+		font-weight: 300;
+		line-height: 1.6rem;
+		margin: 0;
+		padding-right: 20px;
+	}
+	.author {
+		font-size:  .9375rem;
+		color: #777;
+	}
+	.excerpt {
+		color: #777;
+		font-size: .875rem;
+		line-height: 1.5;
+	}
+	.read-more {
+		text-align: right;
+		a {
+			font-size: .875rem;
 		}
 	}
 }

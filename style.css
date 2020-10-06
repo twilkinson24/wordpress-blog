@@ -4427,6 +4427,12 @@ select[multiple].input-lg {
 }
 
 @font-face {
+	font-family: 'Merriweather';
+	src: url(./fonts/Merriweather/Merriweather-Light.ttf);
+	font-weight: 300;
+}
+
+@font-face {
 	font-family: 'Montserrat';
 	src: url(./fonts/Montserrat/Montserrat-Bold.ttf);
 	font-weight: 700;
@@ -4453,6 +4459,20 @@ body {
 	line-height: 1.6em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: #327baa;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #327baa;
+	text-decoration: underline;
+}
+
+a:active, a:focus, a:visited {
+	color: #327baa;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -4685,14 +4705,19 @@ p {
 	margin-left: 0;
 	transition: all 400ms linear;
 	border: none;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+	#primary-menu .sub-menu .menu-item {
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
 }
 
 #primary-menu .sub-menu .menu-item a {
 	color: #444;
 	display: block;
 	width: 100%;
-	padding: 15px 30px 15px 15px;
+	padding: 5px 30px 5px 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -4886,6 +4911,10 @@ p {
 
 .sticky-nav #primary-menu a {
 	color: #444;
+}
+
+.sticky-nav #primary-menu a:hover {
+	color: #ff9902;
 }
 
 .sticky-nav .logo {
@@ -5287,6 +5316,56 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 .single-post .byline a:hover,
 .single-post .entry-meta .posted-on a:hover {
 	text-decoration: underline;
+}
+
+.repx-recent-post {
+	background: #f2f5f8;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.repx-recent-post p {
+	margin-bottom: 0;
+}
+
+.repx-recent-post .title-and-ft-img {
+	margin-bottom: 5px;
+}
+
+.repx-recent-post .title-and-ft-img img {
+	height: 38px;
+	width: 75px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.repx-recent-post .title {
+	font-family: 'Merriweather', serif;
+	font-size: 1.125rem;
+	font-weight: 300;
+	line-height: 1.6rem;
+	margin: 0;
+	padding-right: 20px;
+}
+
+.repx-recent-post .author {
+	font-size: .9375rem;
+	color: #777;
+}
+
+.repx-recent-post .excerpt {
+	color: #777;
+	font-size: .875rem;
+	line-height: 1.5;
+}
+
+.repx-recent-post .read-more {
+	text-align: right;
+}
+
+.repx-recent-post .read-more a {
+	font-size: .875rem;
 }
 
 /*# sourceMappingURL=style.css.map */
