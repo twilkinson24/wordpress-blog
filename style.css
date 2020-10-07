@@ -5433,77 +5433,22 @@ form#commentform.comment-form {
 	box-sizing: inherit;
 }
 
-form#commentform.comment-form textarea#comment {
-	margin: 0px;
-	overflow: auto;
-	resize: vertical;
-	touch-action: manipulation;
-	font-size: 18px;
+form#commentform.comment-form textarea,
+form#commentform.comment-form input[type="text"],
+form#commentform.comment-form input[type="email"] {
+	font-size: 1.125rem;
 	font-weight: 300;
-	letter-spacing: 1px;
-	line-height: 1em;
-	border: 1px solid #dddddd;
-	font-family: Merriweather, sans-serif;
 	padding: 8px 8px 9px;
 	display: inline-block;
 	width: 100%;
-	color: #33475b;
-	height: auto;
-	appearance: none;
-	border-color: #dddddd;
-}
-
-form#commentform.comment-form input#author {
 	margin: 0px;
 	overflow: visible;
 	touch-action: manipulation;
-	font-size: 18px;
 	font-weight: 300;
 	letter-spacing: 1px;
 	line-height: 1em;
 	border: 1px solid #dddddd;
 	font-family: Merriweather, sans-serif;
-	padding: 8px 8px 9px;
-	display: inline-block;
-	width: 100%;
-	color: #33475b;
-	appearance: none;
-	border-color: #dddddd;
-}
-
-form#commentform.comment-form input#email {
-	box-sizing: border-box;
-	margin: 0px;
-	overflow: visible;
-	touch-action: manipulation;
-	font-size: 18px;
-	font-weight: 300;
-	letter-spacing: 1px;
-	line-height: 1em;
-	border: 1px solid #dddddd;
-	font-family: Merriweather, sans-serif;
-	padding: 8px 8px 9px;
-	display: inline-block;
-	width: 100%;
-	color: #33475b;
-	border-color: #c87872;
-	appearance: none;
-}
-
-form#commentform.comment-form input#url {
-	box-sizing: border-box;
-	margin: 0px;
-	overflow: visible;
-	touch-action: manipulation;
-	font-size: 18px;
-	font-weight: 300;
-	letter-spacing: 1px;
-	line-height: 1em;
-	border: 1px solid #dddddd;
-	font-family: Merriweather, sans-serif;
-	padding: 8px 8px 9px;
-	display: inline-block;
-	width: 100%;
 	color: #33475b;
 	appearance: none;
 	border-color: #dddddd;
