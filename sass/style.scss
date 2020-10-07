@@ -215,6 +215,11 @@ p {
 	color: rgb(68, 68, 68);
 }
 
+label {
+	font-family: 'Monteserrat', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 1240px;
@@ -1124,10 +1129,29 @@ aside.blog-sidebar {
 // comment form 
 form#commentform.comment-form {
 	box-sizing: inherit;
+	max-width: 500px;
+	margin-bottom: 100px;
+
+	p { 
+		margin-bottom: 18px;
+	}
+
+	label {
+		color: #33475b;
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+		line-height: 1.2;
+		margin-bottom: 5px;
+
+		.required {
+			color: red;
+		}
+	}
 
 	textarea,
 	input[type="text"],
-	input[type="email"] {
+	input[type="email"],
+	input[type="url"] {
 		font-size: 1.125rem;
 		font-weight: 300;
 		padding: 8px 8px 9px;
@@ -1152,6 +1176,8 @@ form#commentform.comment-form {
 	input#submit.submit {
 		margin: 0px;
 		appearance: none;
+		background: rgb(236, 124, 91);
+		color: #fff;
 		overflow: visible;
 		touch-action: manipulation;
 		cursor: pointer;

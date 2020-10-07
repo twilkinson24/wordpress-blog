@@ -4492,6 +4492,11 @@ p {
 	color: #444444;
 }
 
+label {
+	font-family: 'Monteserrat', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 1240px;
@@ -5431,11 +5436,30 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 
 form#commentform.comment-form {
 	box-sizing: inherit;
+	max-width: 500px;
+	margin-bottom: 100px;
+}
+
+form#commentform.comment-form p {
+	margin-bottom: 18px;
+}
+
+form#commentform.comment-form label {
+	color: #33475b;
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+	line-height: 1.2;
+	margin-bottom: 5px;
+}
+
+form#commentform.comment-form label .required {
+	color: red;
 }
 
 form#commentform.comment-form textarea,
 form#commentform.comment-form input[type="text"],
-form#commentform.comment-form input[type="email"] {
+form#commentform.comment-form input[type="email"],
+form#commentform.comment-form input[type="url"] {
 	font-size: 1.125rem;
 	font-weight: 300;
 	padding: 8px 8px 9px;
@@ -5461,6 +5485,8 @@ form#commentform.comment-form p.comment-form-cookies-consent {
 form#commentform.comment-form input#submit.submit {
 	margin: 0px;
 	appearance: none;
+	background: #ec7c5b;
+	color: #fff;
 	overflow: visible;
 	touch-action: manipulation;
 	cursor: pointer;
