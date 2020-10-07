@@ -234,11 +234,12 @@ function repx_recent_posts() {
 	$repx_recent_post_shortcode_query = new WP_Query( $repx_recent_post_args );
 
 	if($repx_recent_post_shortcode_query->have_posts()) {
+		$repx_shortcode_output = '';
 
 		while($repx_recent_post_shortcode_query->have_posts()) : $repx_recent_post_shortcode_query->the_post();
 
-			if(has_post_thumbnail($post->ID)) {
-				$repx_featured_img_url = get_the_post_thumbnail_url($post->ID,'thumbnail');
+			if(has_post_thumbnail(get_the_id())) {
+				$repx_featured_img_url = get_the_post_thumbnail_url(get_the_id(),'thumbnail');
 			} else {
 				$repx_featured_img_url = get_template_directory_uri() . '/img/home-banner.svg';
 			}
@@ -258,7 +259,6 @@ function repx_recent_posts() {
 			$repx_excerpt .= '...';
 
 			/* end variables - time to build shortcode */
-
 			$repx_shortcode_output .= '<div class="repx-recent-post">';
 
 				$repx_shortcode_output .= '<div class="d-flex justify-content-between title-and-ft-img">';
