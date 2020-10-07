@@ -23,7 +23,11 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 <div class="hero position-relative">
 	<div class="hero-overlay h-100 w-100" style="background-image: url('<?php echo $featured_img_url; ?>">
 		<div class="container">
-			<h1 class="page-title"><?php the_title(); ?></h1> 
+			<div class="row">
+				<div class="col-12">
+					<h1 class="page-title"><?php the_title(); ?></h1> 
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -33,7 +37,11 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 <div class="hero position-relative">
 	<div class="hero-overlay h-100 w-100">
 		<div class="container">
-			<h1 class="page-title"><?php the_title(); ?></h1>
+			<div class="row">
+				<div class="col-12">
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

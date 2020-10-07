@@ -95,7 +95,7 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 				/* translators: 1: list of categories. */
 				printf(
 					 '<span class="cat-links"><span class="tag-title">%s</span>%s</span>', 
-					 __( 'TOPICS: ', '_s'),
+					 __( 'Topics: ', '_s'),
 					 
 					 $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}

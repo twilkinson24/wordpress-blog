@@ -4504,6 +4504,12 @@ p {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.container {
+		width: 100%;
+	}
+}
+
 .cta_button a {
 	-webkit-font-smoothing: antialiased;
 	user-select: none;
@@ -4943,16 +4949,6 @@ p {
 	padding: 15px 30px 15px 35px;
 }
 
-.blog .content-wrap {
-	padding: 0 2% 0 0;
-}
-
-@media screen and (max-width: 768px) {
-	.blog .content-wrap {
-		padding: 0;
-	}
-}
-
 .blog-roll-post {
 	border-bottom: 1px solid #eee;
 }
@@ -5129,59 +5125,8 @@ footer.site-footer .footer-menu a:hover {
 	object-position: center center;
 }
 
-.blog-roll-post .entry-footer .cat-links a {
-	box-sizing: inherit;
-	padding: 6px 8px;
-	border-radius: 12px 12px 12px 12px;
-	margin: 4px;
-	background-color: #00a4bd;
-	color: #fff;
-	font-size: 10px;
-	font-family: 'Montserrat',sans-serif;
-	text-transform: uppercase;
-	white-space: nowrap;
-	display: inline-block;
-	vertical-align: middle;
-	text-decoration: none;
-	transition: all .4s ease-in-out;
-	letter-spacing: 1px;
-	line-height: 1.2em;
-}
-
-.blog-roll-post .entry-footer .cat-links a:hover {
-	background-color: #33475b;
-	color: white;
-	text-decoration: none;
-}
-
-.blog-roll-post .entry-footer .tag-title {
-	font-size: 12px;
-	font-weight: 900;
-	color: #33475b;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	line-height: 1.2em;
-	font-family: 'Montserrat',sans-serif;
-	vertical-align: middle;
-}
-
-.blog-roll-post .entry-footer .comments-link {
-	display: none;
-}
-
-.blog-roll-post .entry-footer .edit-link {
-	display: none;
-}
-
 aside.blog-sidebar {
 	box-sizing: border-box;
-	padding: 0 0 0 2%;
-}
-
-@media screen and (max-width: 768px) {
-	aside.blog-sidebar {
-		padding: 0;
-	}
 }
 
 aside.blog-sidebar h2 {
@@ -5292,19 +5237,58 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 	transform: scale(1.05);
 }
 
+.entry-footer .cat-links a {
+	box-sizing: inherit;
+	padding: 6px 8px;
+	border-radius: 12px 12px 12px 12px;
+	margin: 4px;
+	background-color: #00a4bd;
+	color: #fff;
+	font-size: 10px;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	transition: all .4s ease-in-out;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+}
+
+.entry-footer .cat-links a:hover {
+	background-color: #33475b;
+	color: white;
+	text-decoration: none;
+}
+
+.entry-footer .tag-title {
+	font-size: 12px;
+	font-weight: 900;
+	color: #33475b;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	font-family: 'Montserrat',sans-serif;
+	vertical-align: middle;
+}
+
+.entry-footer .comments-link {
+	display: none;
+}
+
+.entry-footer .edit-link {
+	display: none;
+}
+
 .single-post .hero .hero-overlay {
 	background: transparent;
 	background: rgba(0, 0, 0, 0.5);
 }
 
-.single-post .content-wrap {
-	padding: 0 2% 0 0;
-}
-
-@media screen and (max-width: 768px) {
-	.single-post .content-wrap {
-		padding: 0;
-	}
+.single-post .hero .row .col-12 {
+	padding: 0 10px;
 }
 
 .single-post article h1,
@@ -5347,6 +5331,10 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 .single-post .byline a:hover,
 .single-post .entry-meta .posted-on a:hover {
 	text-decoration: underline;
+}
+
+.single-post .comments-wrap {
+	padding: 0;
 }
 
 .repx-recent-post {

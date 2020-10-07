@@ -28,7 +28,11 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 <div class="hero position-relative">
 	<div class="hero-overlay h-100 w-100" style="background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('<?php echo $featured_img_url; ?>');">
 		<div class="container">
-			<h1 class="page-title"><?php the_title(); ?></h1> 
+			<div class="row">
+				<div class="col-12">
+					<h1 class="page-title"><?php the_title(); ?></h1> 
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -38,7 +42,11 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 <div class="hero position-relative">
 	<div class="hero-overlay h-100 w-100">
 		<div class="container">
-			<h1 class="page-title"><?php the_title(); ?></h1>
+			<div class="row">
+				<div class="col-12">
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -46,12 +54,11 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 <?php endif; ?>
 
 
-<main id="primary" class="site-main">
 			<div class="container">
 				<div class="row">
 
 				<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-					<div class="col-lg-8 content-wrap">
+					<div class="col-md-8 content-wrap">
 				<?php else : ?>
 					<div class="col-12">
 				<?php endif; ?>
@@ -112,14 +119,31 @@ $featured_img_url = get_the_post_thumbnail_url($post->ID,'large');
 
 							<footer class="entry-footer">
 								<?php _s_entry_footer(); ?>
+
 							</footer><!-- .entry-footer -->
-						</article><!-- #post-<?php the_ID(); ?> -->
+						</article><!-- #post -->
+
+						<?php 
+
+						// leave commented out for now
+						// the_post_navigation(
+						// 	array(
+						// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', '_s' ) . '</span> <span class="nav-title">%title</span>',
+						// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', '_s' ) . '</span> <span class="nav-title">%title</span>',
+						// 	)
+						// );
+
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif; 
+						?>
 
 					</div> <!-- end .col -->
 
 					<!-- sidebar -->
 					<?php 	if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-						<aside class="blog-sidebar col-lg-4">
+						<aside class="blog-sidebar col-md-4">
 							<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 						</aside>						
 					<?php endif; ?>
