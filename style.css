@@ -5291,6 +5291,10 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 	padding: 0 10px;
 }
 
+.single-post .entry-content {
+	margin-top: 0;
+}
+
 .single-post article h1,
 .single-post article h2,
 .single-post article h3,
@@ -5335,6 +5339,44 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 
 .single-post .comments-wrap {
 	padding: 0;
+}
+
+.single-post .ss-inline-share-wrapper {
+	margin: 15px 0;
+	border: 1px solid #eee;
+	border-left: none;
+	border-right: none;
+}
+
+.single-post .ss-inline-share-wrapper.ss-with-spacing .ss-social-icons-container > li {
+	margin: 15px 6px 6px 0 !important;
+	padding: 0 25px 0px 0 !important;
+}
+
+.single-post .ss-social-icons-container > li > a {
+	border: none !important;
+}
+
+.single-post .ss-social-icons-container > li > a:hover:after {
+	background: #fff;
+}
+
+.single-post .ss-social-share-label {
+	display: none !important;
+}
+
+.single-post .ss-social-icons-container li a {
+	background: #fff;
+}
+
+.single-post .ss-social-icons-container li a:hover {
+	background: #fff;
+}
+
+.single-post .ss-social-icons-container li a svg.ss-svg-icon {
+	fill: #ff7a59;
+	height: 24px;
+	width: 24px;
 }
 
 .repx-recent-post {

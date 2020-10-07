@@ -998,6 +998,9 @@ aside.blog-sidebar {
 			padding: 0 10px;
 		}
 	}
+	.entry-content {
+		margin-top: 0;
+	}
 
 	article h1,
 	article h2,
@@ -1033,6 +1036,43 @@ aside.blog-sidebar {
 	}
 	.comments-wrap {
 		padding: 0;
+	}
+
+	// social sharing 
+	.ss-inline-share-wrapper {
+		margin: 15px 0;
+		border: 1px solid #eee;
+		border-left: none;
+		border-right: none;
+	}
+	.ss-inline-share-wrapper.ss-with-spacing .ss-social-icons-container>li {
+		margin: 15px 6px 6px 0!important;
+		padding: 0 25px 0px 0!important;	
+	}
+	.ss-social-icons-container>li>a {
+		border: none !important;
+
+		&:hover:after {
+			background: #fff;
+		}
+	}
+	.ss-social-share-label {
+		display: none !important;
+	}
+	.ss-social-icons-container {
+		li a {
+			background: #fff;
+
+			&:hover {
+				background: #fff;
+			}
+
+			svg.ss-svg-icon {
+				fill: #ff7a59;
+				height: 24px;
+				width: 24px;
+			} 
+		}
 	}
 }
 
