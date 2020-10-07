@@ -77,8 +77,9 @@ get_header();
 					get_template_part( 'template-parts/content', 'blog');
 
 				endwhile;
-
-				the_posts_navigation(); ?>
+				
+				repx_numeric_posts_nav();
+				?>
 
 			</div> <!-- end col -->
 

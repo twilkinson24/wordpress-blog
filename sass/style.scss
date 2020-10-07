@@ -664,14 +664,16 @@ label {
 // END nav
 
 // Blog 
+.single.single-post,
 .blog {
-	// .content-wrap {
-	// 	padding: 0 2% 0 0;
-
-	// 	@media screen and (max-width: $md) {
-	// 		padding: 0;
-	// 	}
-	// }
+	@media screen and (min-width: 1400px) {
+		.hero .container {
+			padding: 0;
+		}
+		.content-wrap {
+			padding: 0 3% 0 0;
+		}
+	}
 }
 .blog-roll-post {
 	border-bottom: 1px solid #eee;

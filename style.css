@@ -4954,6 +4954,17 @@ label {
 	padding: 15px 30px 15px 35px;
 }
 
+@media screen and (min-width: 1400px) {
+	.single.single-post .hero .container,
+	.blog .hero .container {
+		padding: 0;
+	}
+	.single.single-post .content-wrap,
+	.blog .content-wrap {
+		padding: 0 3% 0 0;
+	}
+}
+
 .blog-roll-post {
 	border-bottom: 1px solid #eee;
 }
