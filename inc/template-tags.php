@@ -66,6 +66,22 @@ if ( ! function_exists( '_s_posted_on_blog_roll' ) ) :
 	}
 endif;
 
+if ( ! function_exists( '_s_posted_by_blog' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author.
+	 */
+	function _s_posted_by_blog() {
+		$byline = sprintf(
+			/* translators: %s: post author. */
+			esc_html_x( 'By %s', 'post author', '_s' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
+
+		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
 if ( ! function_exists( '_s_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
@@ -73,7 +89,7 @@ if ( ! function_exists( '_s_posted_by' ) ) :
 	function _s_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'By %s', 'post author', '_s' ),
+			esc_html_x( 'by %s', 'post author', '_s' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
