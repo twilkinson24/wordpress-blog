@@ -5437,6 +5437,11 @@ aside.blog-sidebar .textwidget form input.wpcf7-form-control.wpcf7-submit:hover 
 form#commentform.comment-form {
 	box-sizing: inherit;
 	max-width: 500px;
+	margin-bottom: 100px;
+}
+
+form#commentform.comment-form p {
+	margin-bottom: 18px;
 }
 
 form#commentform.comment-form label {
@@ -5480,6 +5485,8 @@ form#commentform.comment-form p.comment-form-cookies-consent {
 form#commentform.comment-form input#submit.submit {
 	margin: 0px;
 	appearance: none;
+	background: #ec7c5b;
+	color: #fff;
 	overflow: visible;
 	touch-action: manipulation;
 	cursor: pointer;
