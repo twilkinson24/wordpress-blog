@@ -14,10 +14,12 @@ if(class_exists('ACF')) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog-roll-post'); ?>>
-	<?php if($reading_time) : ?>
-		<p class="post-read-time">
-			<?php echo $reading_time; ?>
-		</p>
+	<?php if(class_exists('ACF')) : ?>
+		<?php if($reading_time) : ?>
+			<p class="post-read-time">
+				<?php echo $reading_time; ?>
+			</p>
+		<?php endif; ?>
 	<?php endif; ?>
 	<header class="entry-header">
 		<?php
