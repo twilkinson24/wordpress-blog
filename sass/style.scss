@@ -1120,3 +1120,116 @@ aside.blog-sidebar {
 		}
 	}
 }
+
+// comment form 
+form#commentform.comment-form {
+	box-sizing: inherit;
+	textarea#comment {
+		margin: 0px;
+		overflow: auto;
+		resize: vertical;
+		touch-action: manipulation;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		line-height: 1em;
+		border: 1px solid rgb(221, 221, 221);
+		font-family: Merriweather, sans-serif;
+		padding: 8px 8px 9px;
+		display: inline-block;
+		width: 100%;
+		color: rgb(51, 71, 91);
+		height: auto;
+		appearance: none;
+		border-color: rgb(221, 221, 221);
+	}
+	input#author {
+		margin: 0px;
+		overflow: visible;
+		touch-action: manipulation;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		line-height: 1em;
+		border: 1px solid rgb(221, 221, 221);
+		font-family: Merriweather, sans-serif;
+		padding: 8px 8px 9px;
+		display: inline-block;
+		width: 100%;
+		color: rgb(51, 71, 91);
+		appearance: none;
+		border-color: rgb(221, 221, 221);
+	}
+	input#email{
+		box-sizing: border-box;
+		margin: 0px;
+		overflow: visible;
+		touch-action: manipulation;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		line-height: 1em;
+		border: 1px solid rgb(221, 221, 221);
+		font-family: Merriweather, sans-serif;
+		padding: 8px 8px 9px;
+		display: inline-block;
+		width: 100%;
+		color: rgb(51, 71, 91);
+		border-color: rgb(200, 120, 114);
+		appearance: none;
+	}
+	input#url {
+		box-sizing: border-box;
+		margin: 0px;
+		overflow: visible;
+		touch-action: manipulation;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		line-height: 1em;
+		border: 1px solid rgb(221, 221, 221);
+		font-family: Merriweather, sans-serif;
+		padding: 8px 8px 9px;
+		display: inline-block;
+		width: 100%;
+		color: rgb(51, 71, 91);
+		appearance: none;
+		border-color: rgb(221, 221, 221);
+	}
+	p.comment-form-cookies-consent {
+		display: none;
+	}
+	input#submit.submit {
+		margin: 0px;
+		appearance: none;
+		overflow: visible;
+		touch-action: manipulation;
+		cursor: pointer;
+		display: inline-block;
+		line-height: 1.1;
+		position: relative;
+		text-align: center;
+		transition: all 0.15s linear 0s;
+		border-radius: 2px;
+		border-style: solid;
+		border-width: 0px;
+		font-size: 18px;
+		padding: 20px 25px;
+		white-space: normal;
+		word-break: break-word;
+		width: auto;
+		height: auto;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px 0px;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-family: Monteserrat, sans-serif;
+		letter-spacing: 1px; 
+		&:hover {
+			background-color:rgb(215, 82, 49);
+			border-color: rgb(248, 106, 70);
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+			transform: scale(1.05);
+		}
+	}
+}         
