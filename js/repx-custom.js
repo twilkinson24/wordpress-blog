@@ -35,9 +35,6 @@
         })
     }
 
-
-
-
     /* Sticky Navbar */
     window.onscroll = function() {handleStickyNav()};
 
@@ -45,7 +42,6 @@
     // var sticky = navbar.offsetTop;
 
     function handleStickyNav() {
-        console.log('hi')
         if (window.pageYOffset >= 150) {
             navbar.classList.add("sticky-nav")
         } else {

@@ -141,27 +141,32 @@ $white: #FFFFFF;
 @font-face {
     font-family: 'Merriweather';  
     src: url(./fonts/Merriweather/Merriweather-Bold.ttf);  
-    font-weight: 700;  
+	font-weight: 700;  
+	font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather';  
     src: url(./fonts/Merriweather/Merriweather-Regular.ttf);  
-    font-weight: 500;  
+	font-weight: 500;  
+	font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather';  
     src: url(./fonts/Merriweather/Merriweather-Light.ttf);  
-    font-weight: 300;  
+	font-weight: 300;  
+	font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';  
     src: url(./fonts/Montserrat/Montserrat-Bold.ttf);  
-    font-weight: 700;  
+	font-weight: 700;  
+	font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';  
     src: url(./fonts/Montserrat/Montserrat-Medium.ttf);  
-    font-weight: 500;  
+	font-weight: 500;  
+	font-display: swap;
 }
 
 
@@ -1210,4 +1215,26 @@ form#commentform.comment-form {
 			transform: scale(1.05);
 		}
 	}
-}         
+} 
+
+// pagination
+.post-navigation ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	li {
+		margin: 0 5px 50px 5px;
+
+		a {
+			color: $dark-grey;
+			border-radius: 7px;
+			padding: 4px 5px;
+		}
+
+		&.active a {
+			border: 2px solid #b0c1d4;
+		}
+	}
+}

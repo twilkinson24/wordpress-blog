@@ -330,11 +330,11 @@ function repx_numeric_posts_nav() {
         $links[] = $paged + 1;
     }
  
-    echo '<div class="navigation"><ul>' . "\n";
+    echo '<div class="post-navigation"><ul class="d-flex justify-content-center">' . "\n";
  
     /** Previous Post Link */
     if ( get_previous_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+        printf( '<li>%s</li>' . "\n", get_previous_posts_link( '&lsaquo; Prev') );
  
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -364,7 +364,7 @@ function repx_numeric_posts_nav() {
  
     /** Next Post Link */
     if ( get_next_posts_link() )
-        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+        printf( '<li>%s</li>' . "\n", get_next_posts_link('Next &rsaquo;') );
  
     echo '</ul></div>' . "\n";
  

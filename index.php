@@ -26,7 +26,8 @@ get_header();
 			if (has_post_thumbnail( $page_id ) ) : 
 				
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large');
-				$ft_image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'large' ); 
+				$ft_image_arr = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'large' ); 
+				$ft_image = $ft_image_arr[0];
 			?>
 				<div class="hero position-relative">
 					<div class="hero-overlay h-100 w-100" style="background-image: url('<?php echo $ft_image; ?>">

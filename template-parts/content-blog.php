@@ -42,7 +42,7 @@ if(class_exists('ACF')) {
 
     <?php if(has_post_thumbnail($post->ID)) : ?>
         <div class="post-thumbnail">
-            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+            <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large');
                     $thumb_id = get_post_thumbnail_id(get_the_ID());
                     $featured_img_alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
             ?>
